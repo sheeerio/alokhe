@@ -381,6 +381,10 @@ def eng_break1():
             A[x] = 's'
         if A[x] == 'ɪ' and 'i' not in B:
             A[x] = 'a'
+        if A[x]=='s' and 'c' in B:
+            A[x]='c'
+        if A[x] == 'i' and A[x+1]==' ' and A[x-1]!=' ' and 'ee' not in B:
+            A[x]='y'
 
     for i in range(len(A)):
         if i!=len(A)-1:
