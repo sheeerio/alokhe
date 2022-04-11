@@ -380,9 +380,9 @@ for x in range(len(B)):
         A[x] = 't'
         A[x+1] = 'ur'
         A[x+2] = 'e'
-    if A[x] == 'k' and 'k' and 'q' not in B:
+    if A[x] == 'k' and 'k' not in B and 'q' not in B and A[x+2]!='s':
         A[x] = 'c'
-    elif A[x] == 'k' and A[x] not in B and 'c' not in B:
+    elif A[x] == 'k' and A[x] not in B and 'c' not in B and A[x+2]!='s':
         A[x] = 'q'
     if A[x] == 'ʤ' and 'j' not in B and 'g' not in B:
         A[x] = 'd'
@@ -390,6 +390,8 @@ for x in range(len(B)):
         A[x] = 'g'
     if A[x] == 'ʤ' and 'g' not in B and 'd' not in B:
         A[x] = 'j'
+    if A[x] == 'i' and A[x+1]==' ' and A[x-1]!=' ' and 'ee' not in B:
+        A[x]='y'
     if A[x] == 'f' and 'f' not in B:
         A[x] = 'p'
         A[x+1] = 'h'+A[x+1]
@@ -397,8 +399,7 @@ for x in range(len(B)):
         A[x] = 's'
     if A[x] == 'ɪ' and 'i' not in B:
         A[x] = 'a'
-
-
+    
 def be():
     for i in range(len(A)):
         if A[i] == ' ' and A[i-1] != ' ' and A[i+1] != ' ':
