@@ -381,9 +381,9 @@ def eng_break1():
             A[x] = 's'
         if A[x] == 'ɪ' and 'i' not in B:
             A[x] = 'a'
-        if A[x]=='s' and 'c' in B and B[B.index('c')+1]!='h':
+        if A[x]=='s' and 'c' in B:
             A[x]='c'
-        if A[x] == 'i' and A[x+1]==' ' and A[x-1]!=' ' and ['e','e'] not in B:
+        if A[x] == 'i' and A[x+1]==' ' and A[x-1]!=' ' and 'ee' not in B:
             A[x]='y'
 
     for i in range(len(A)):
@@ -509,7 +509,7 @@ def hello_world(input):
         hincorrect2(better_hindi)
         hin_perf(final)
         hin_syl_list.append(finall)
-    return  jsonify({'B': FINALISTA,'A':input, 'D':Syl, 'E':B_final, 'F':hin_syl_list, 'C':season_syl})
+    return  jsonify({'text': {'hinout': FINALISTA,'engin':input}, 'useless_syl' : {'wordsyl':Syl,  'ipasyl':season_syl}, 'useful_syl' : {'engsyl':B_final, 'hinsyl':hin_syl_list}})
 
 if __name__ == "__main__":
     app.run(debug=True)
