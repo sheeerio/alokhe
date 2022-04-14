@@ -509,7 +509,7 @@ def hello_world(input):
         hincorrect2(better_hindi)
         hin_perf(final)
         hin_syl_list.append(finall)
-    return  jsonify({'text': {'hinout': FINALISTA,'engin':input}, 'useless_syl' : {'wordsyl':Syl,  'ipasyl':season_syl}, 'useful_syl' : {'engsyl':B_final, 'hinsyl':hin_syl_list}})
+    return  jsonify([{'text': {'hinout': FINALISTA,'engin':input}, 'useless_syl' : {'wordsyl':Syl,  'ipasyl':season_syl}, 'useful_syl' : {'engsyl':B_final, 'hinsyl':hin_syl_list}}])
 
 if __name__ == "__main__":
     app.run(debug=True)
