@@ -1,5 +1,10 @@
 # English to Hindi Transliteration
-Uses rule-based transliteration using IPA and [eng_to_ipa](https://pypi.org/project/eng-to-ipa/) library.
+Uses rule-based transliteration using IPA and [eng_to_ipa](https://pypi.org/project/eng-to-ipa/) library. 
+
+*Note: The output is based on the CMU-DICT IPA which is entirely based off the american accent* 
+
+## How to use?
+Put your word in after `https://alokhe.herokuapp.com/`. For example, `https://alokhe.herokuapp.com/machine%20translation` outputs `मशीन ट्रैनज़लेशन`.
 
 ## Examples
 `https://alokhe.herokuapp.com/extravagant` outputs:
